@@ -2479,12 +2479,12 @@ namespace MoreGamemodes
         {
             int length = __instance.textArea.text.Length;
 		    __instance.charCountText.text = length + "/" + __instance.textArea.characterLimit;
-            if (length < (AmongUsClient.Instance.AmHost ? 750 : 225))
+            if (length < (AmongUsClient.Instance.AmHost ? 1111 : 888))
 		    {
 		        __instance.charCountText.color = Color.black;
 		        return;
 		    }
-		    if (length < (AmongUsClient.Instance.AmHost ? 1000 : 300))
+		    if (length < (AmongUsClient.Instance.AmHost ? 2000 : 1200))
 		    {
 		        __instance.charCountText.color = new Color(1f, 1f, 0f, 1f);
 		        return;
@@ -2545,7 +2545,7 @@ namespace MoreGamemodes
     {
         public static void Postfix(ChatController __instance)
         {
-            __instance.freeChatField.textArea.characterLimit = AmongUsClient.Instance.AmHost ? 1000 : 300;
+            __instance.freeChatField.textArea.characterLimit = AmongUsClient.Instance.AmHost ? 2000 : 1200;
             if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && Input.GetKeyDown(KeyCode.C))
                 ClipboardHelper.PutClipboardString(__instance.freeChatField.textArea.text);
 
